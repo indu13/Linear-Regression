@@ -31,14 +31,10 @@ SSE = sum(model3$residuals^2)
 SSE
 
 
-# VIDEO 5
 
 # Remove FrancePop
 model4 = lm(Price ~ AGST + HarvestRain + WinterRain + Age, data=wine)
 summary(model4)
-
-
-# VIDEO 6
 
 # Correlations
 cor(wine$WinterRain, wine$Price)
@@ -48,9 +44,6 @@ cor(wine)
 # Remove Age and FrancePop
 model5 = lm(Price ~ AGST + HarvestRain + WinterRain, data=wine)
 summary(model5)
-
-
-# VIDEO 7
 
 # Read in test set
 wineTest = read.csv("wine_test.csv")
